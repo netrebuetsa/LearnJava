@@ -2,8 +2,8 @@ import java.util.Random;
 import java.util.Scanner;
 // объявили массивы
  class Array {
-    int[] intArray;
-    float[] floatArray;
+   private int[] intArray;
+   private float[] floatArray;
 
 // создали массивы
     Array(int intsize, int floatsize){
@@ -72,71 +72,71 @@ import java.util.Scanner;
         }
 
         // выводим все четные элементы массива по индексу
-        public static void printEvenElementsByIndex(int[] Array) {
-            for (int i = 0; i < Array.length; i++) {
-                if (i % 2 == 0) System.out.println("Четный элемент int-массива по индексу: " + i + " = " + Array[i]);
+        public void printEvenElementsByIndexInt() {
+            for (int i = 0; i < intArray.length; i++) {
+                if (i % 2 == 0) System.out.println("Четный элемент int-массива по индексу: " + i + " = " + intArray[i]);
             }
         }
 
-         public static void printEvenElementsByIndex(float[] Array) {
-            for (int i = 0; i < Array.length; i++) {
-             if (i % 2 == 0) System.out.println("Четный элемент float-массива по индексу: " + i + " = " + Array[i]);
+         public  void printEvenElementsByIndexFloat() {
+            for (int i = 0; i < intArray.length; i++) {
+             if (i % 2 == 0) System.out.println("Четный элемент float-массива по индексу: " + i + " = " + intArray[i]);
         }
     }
          // выводим четные элементы массива по значению
-         public static void printEvenElementsByValue(int[] Array) {
-             for (int i = 0; i < Array.length; i++) {
-                 if (Array[i] % 2 == 0) System.out.println("Четный элемент int-массива: " + i + " значение = " + Array[i]);
+         public  void printEvenElementsByValue() {
+             for (int i = 0; i < intArray.length; i++) {
+                 if (intArray[i] % 2 == 0) System.out.println("Четный элемент int-массива: " + i + " значение = " + intArray[i]);
              }
          }
 
         // выводим отрицательные элементы массива
-        public static void printElementsNegativeInt(int[] Array) {
-            for (int i = 0; i < Array.length; i++) {
-                if (Array[i] < 0) System.out.println("Отрицательный элемент int-массива: " + i + " = " + Array[i]);
+        public  void printElementsNegativeInt() {
+            for (int i = 0; i < intArray.length; i++) {
+                if (intArray[i] < 0) System.out.println("Отрицательный элемент int-массива: " + i + " = " + intArray[i]);
             }
         }
-        public static void printElementsNegativeFloat(float[] Array) {
-            for (int i = 0; i < Array.length; i++) {
-                 if (Array[i] <= 0f) System.out.println("Отрицательный элемент float-массива: " + i + " = " + Array[i]);
+        public void printElementsNegativeFloat() {
+            for (int i = 0; i < intArray.length; i++) {
+                 if (intArray[i] <= 0f) System.out.println("Отрицательный элемент float-массива: " + i + " = " + intArray[i]);
                 }
          }
 
         // выводим сумму массива по абсолютной величине
-        public static void printSumByAbs(int[] Array) {
+        public void printSumByAbsInt() {
             int asum = 0;
-            for (int i = 0; i < Array.length; i++) asum += Math.abs(Array[i]);
+            for (int i = 0; i < intArray.length; i++) asum += Math.abs(intArray[i]);
                 System.out.println("Сумма элеменотов по абсолютной величине int-массива: " + asum);
 
         }
 
-         public static void printSumByAbs(float[] Array) {
+         public  void printSumByAbsFloat() {
             float asum = 0;
-             for (int i = 0; i < Array.length; i++) asum += Math.abs(Array[i]);
+             for (int i = 0; i < floatArray.length; i++) asum += Math.abs(floatArray[i]);
              System.out.println("Сумма элеменотов по абсолютной величине float-массива: " + asum);
 
         }
 
         // к отрицательному прибавляем 5, от положительного отнимаем 10
-        public static void printAddSubstract(int[] Array) {
+        public  void printAddSubstract() {
             int nsum = 0;
             int psum = 0;
-            for (int i = 0; i < Array.length; i++) {
-                if (Array[i] < 0) {nsum = Array[i] + 5;
+            for (int i = 0; i < intArray.length; i++) {
+                if (intArray[i] < 0) {nsum = intArray[i] + 5;
                     System.out.println("Отрицательный элемент int-массива + 5: " + nsum);}
-                else {psum = Array[i] - 10;
+                else {psum = intArray[i] - 10;
                 System.out.println("Положительный элемент int-массива - 10: " + psum);}
             }
         }
 
         // отрицательный умножаем на 2, положительный делим на 1.5
-        public static void printMultiplyDivide(float[] Array) {
+        public  void printMultiplyDivide() {
             float nsum = 0;
             double psum = 0;
-            for (int i = 0; i < Array.length; i++) {
-                if (Array[i] < 0f) {nsum = Array[i] * 2;
+            for (int i = 0; i < floatArray.length; i++) {
+                if (floatArray[i] < 0f) {nsum = floatArray[i] * 2;
                     System.out.println("Отрицательный элемент float-массива умноженный на 2: " + nsum);}
-                else {psum = Array[i] / 1.5;
+                else {psum = floatArray[i] / 1.5;
                     System.out.println("Положительный элемент float-массива деленный на 1.5: " + psum);}
             }
         }
@@ -161,25 +161,25 @@ import java.util.Scanner;
              System.out.println("Сумма элементоа float-массива: " + fsum);
 
              //выводим все четные элементы массива по индексу
-             Array.printEvenElementsByIndex(firstArray.intArray);
-             Array.printEvenElementsByIndex(firstArray.floatArray);
+             firstArray.printEvenElementsByIndexInt();
+             firstArray.printEvenElementsByIndexFloat();
 
              // выводим четные элементы массива по значению
-             Array.printEvenElementsByValue(firstArray.intArray);
+             firstArray.printEvenElementsByValue();
 
              // выводим отрицательные элементы массива
-             Array.printElementsNegativeInt(firstArray.intArray);
-             Array.printElementsNegativeFloat(firstArray.floatArray);
+             firstArray.printElementsNegativeInt();
+             firstArray.printElementsNegativeFloat();
 
              // выводим сумму массива по абсолютной величине
-             Array.printSumByAbs(firstArray.intArray);
-             Array.printSumByAbs(firstArray.floatArray);
+             firstArray.printSumByAbsInt();
+             firstArray.printSumByAbsFloat();
 
              // к отрицательному прибавляем 5, от положительного отнимаем 10
-             Array.printAddSubstract(firstArray.intArray);
+             firstArray.printAddSubstract();
 
              // отрицательный умножаем на 2, положительный делим на 1.5
-             Array.printMultiplyDivide(firstArray.floatArray);
+             firstArray.printMultiplyDivide();
 
          }
     }
