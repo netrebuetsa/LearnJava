@@ -7,11 +7,12 @@ class Aspirant extends Student{
     }
 
     @Override
-    int getScholarship() {
+    int getScolarship() {
         if (AverageMark == 5)
             return 200;
         else return 100;
     }
+    
 
     @Override
     public String toString() {
