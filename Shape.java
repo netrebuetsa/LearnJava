@@ -26,14 +26,14 @@ public abstract class Shape implements Printable {
         if (this == someObject)
             return true;
 
+    if (someObject instanceof Shape) {
+    Shape shape = (Shape) someObject;
+        return this.coord_x == shape.coord_x && this.coord_y == shape.coord_y;
+    }
 
-        Shape shape = (Shape) someObject;
+    else return false;
 
-        if (this.coord_x != shape.coord_x)
-            return false;
-        if (this.coord_y != shape.coord_y)
-            return false;
-        else return true;
+
     }
 
 

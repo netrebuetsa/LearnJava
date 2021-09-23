@@ -31,14 +31,11 @@ public class Circle extends Shape {
     public boolean equals(Object someObject) {
         if (this == someObject)
             return true;
-
+        if (!super.equals(someObject)) return false;
 
         Circle circle = (Circle) someObject;
 
-        if (this.getCoordX() != circle.getCoordX())
-            return false;
-        if (this.getCoordY() != circle.getCoordY())
-            return false;
+
 
         if (this.radius != circle.radius) {
             System.out.println("Radius are not equal");
