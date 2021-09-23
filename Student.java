@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class Student {
-    String FirstName;
-    String LastName;
+   String FirstName;
+   String LastName;
     String Group;
     double AverageMark;
 
